@@ -10,15 +10,10 @@ Ferramenta de busca de usuários do GitHub e seus respectivos diretórios, desen
 
 ### Recursos utilizados:
 - **Frontend**: HTML5, CSS3 e as bibliotecas [jQuery](https://code.jquery.com/) e [Font Awesome](https://fontawesome.com)
-- **Empacotadores**: YarnTeste unitário 
--
+- **Empacotadores**: [Node.js](https://nodejs.org/en/)+[Yarn](https://yarnpkg.com/pt-BR/docs/install)
+- **Módulo~~s~~**: apenas o módulo de testes [Jest](https://jestjs.io) com fins demonstrativos
 
 ### Orientações:
-
 - **Node.js**: [instalador](https://nodejs.org/en/)
 - **Yarn**: [instalador](https://yarnpkg.com/pt-BR/docs/install)
-- **Teste unitário:** 
-```
-yarn add -D jest
-yarn test
-```
+- **Teste unitário:** ` yarn add -D jest ` e ` yarn test `
