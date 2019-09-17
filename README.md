@@ -1,7 +1,7 @@
 # Busca Git
 
-Ferramenta de busca de usuários do GitHub e seus respectivos diretórios, desenvolvida com HTML5 e jQuery:
-murilomugga.github.io/buscagit
+Ferramenta de busca de usuários do GitHub e seus respectivos diretórios, desenvolvida com HTML5 e jQuery.
+[murilomugga.github.io/buscagit](https://murilomugga.github.io/buscagit)
 
 ### Recursos oferecidos:
 - **Busca Autenticada**: aumento da taxa limite (~~10/min~~ 30/min na busca e ~~60/h~~ 5000/h no geral )
@@ -13,17 +13,11 @@ murilomugga.github.io/buscagit
 - **Empacotadores**: YarnTeste unitário 
 -
 
-### Instalação
+### Orientações:
 
-Instalar Node:
-
-https://nodejs.org/en/
-
-Instalar Yarn:
-
-https://yarnpkg.com/pt-BR/docs/install
-
-Rodar testes:
-```
+- **Node.js**: [instalador](https://nodejs.org/en/)
+- **Yarn**: [instalador](https://yarnpkg.com/pt-BR/docs/install)
+- **Teste unitário:** ```
+yarn add -D jest
 yarn test
 ```
