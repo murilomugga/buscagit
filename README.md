@@ -17,7 +17,8 @@ Ferramenta de busca de usuários do GitHub e seus respectivos diretórios, desen
 
 - **Node.js**: [instalador](https://nodejs.org/en/)
 - **Yarn**: [instalador](https://yarnpkg.com/pt-BR/docs/install)
-- **Teste unitário:** ```
+- **Teste unitário:** 
+```
 yarn add -D jest
 yarn test
 ```
