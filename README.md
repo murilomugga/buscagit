@@ -1,8 +1,7 @@
 # Busca Git
 
-https://murilomugga.github.io/buscagit
-
-Ferramenta de busca de usuários do GitHub e seus respectivos diretórios, desenvolvida com HTML5 e jQuery
+Ferramenta de busca de usuários do GitHub e seus respectivos diretórios, desenvolvida com HTML5 e jQuery:
+murilomugga.github.io/buscagit
 
 ### Recursos oferecidos:
 - **Busca Autenticada**: aumento da taxa limite (~~10/min~~ 30/min na busca e ~~60/h~~ 5000/h no geral )
