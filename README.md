@@ -1,4 +1,4 @@
-# Busca Git
+# Busca Git [![forthebadge](https://forthebadge.com/images/badges/built-by-hipsters.svg)](https://forthebadge.com)
 
 Ferramenta de busca de usuários do GitHub e seus respectivos diretórios, desenvolvida com HTML5 e jQuery.
 [murilomugga.github.io/buscagit](https://murilomugga.github.io/buscagit)
