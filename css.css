@@ -33,6 +33,7 @@ body:before { content:'\200B'; display:inline-block; height:100%; vertical-align
 			main>img { float:left; width:calc(50% - 1em); margin-right:1em; height:(100%/2); border:10px solid #fff; box-shadow:0 0 10px rgba(0,0,0,0.2); }
 			h1 { font-size:2em; font-weight:bold; }
 			ul+h1 { clear:both; padding:1em 0 0.25em;}
+				ul i { float:right; margin:7px 0 0; }
 				h1 i, main.asc h1 i:hover { float:right; font-size:0.5em; margin:1.2em 4.4em 0 0; transform:none; cursor:pointer; }
 				h1 i:hover, main.asc h1 i { transform:scaleY(-1); margin-top:1.6em; }
 			h1+ol { border-top:1px solid #ccc; }
