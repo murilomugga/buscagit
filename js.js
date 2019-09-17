@@ -35,22 +35,22 @@ $(document).ready(function(){
 	})
 	
 	//detalhamento
-	function detalhar(usuario,ordenacao){
+	function detalhar(usuario,ordenacao,infos){
 		$('main').html(''); //reseta conteúdo
 		$('.loading').show(); //mostra loading
 		$.getJSON( 'https://api.github.com/users/'+usuario, function(data){ //dados do usuário
 			$('main').append('<img src='+data.avatar_url+'>');
 			$('main').append('<ul></ul>')
 			$('ul').append('<li><h1>'+data.login+'</h1></li>');
-			if(data.name!=null)	$('ul').append('<li><h2>'+data.name+'</h1></li>');
-			if(data.email!=null)	$('ul').append('<li><a href="mailto:'+data.email+'">'+data.email+'</a></li>');
-			$('ul').append('<li>seguidores: '+data.followers+' &nbsp; seguindo: '+data.following+'</li>');
-			if(data.bio!=null) $('ul').append('<li>'+data.bio+'</li>');
+			if(data.name!=null)	$('ul').append('<li><h2>'+data.name+'<i class="fas fa-user"></i></h2></li>');
+			if(data.email!=null)	$('ul').append('<li><a href="mailto:'+data.email+'">'+data.email+'</a><i class="fas fa-envelope"></i></li>');
+			$('ul').append('<li>seguidores: '+data.followers+' &nbsp; seguindo: '+data.following+'<i class="fas fa-eye"></i></li>');
+			if(data.bio!=null) $('ul').append('<li>'+data.bio+'<i class="fas fa-book"></i></li>');
 			$('.loading').show(); //mostra loading
 			$('main').append('<h1><span></span></h1>');
 			if(!ordenacao) ordenacao='desc';
 			$.getJSON( 'https://api.github.com/search/repositories?q=user:'+usuario+'+fork:true&sort=stars&order='+ordenacao, function(json){ //lista repositórios				
-				if(json.total_count>1) $('ul+h1').append('<i class="fas fa-sort-down" title="reordenar"></i></i>');
+				if(json.total_count>1) $('ul+h1').append('<i class="fas fa-sort-down" title="reordenar"></i>');
 				$('h1 i').click(function(){ //ordenação
 					$('main').toggleClass('asc');
 					$('main').hasClass('asc') ? detalhar(usuario,'asc') : detalhar(usuario);
@@ -58,13 +58,14 @@ $(document).ready(function(){
 				$('main').append('<ol></ol>');
 				$('ul+h1 span').text('repositório'+((json.total_count==1)?'':'s'));
 				$.each( json['items'], function(i,v){ //para cada repositório
-					$('ol').append('<li id="'+v.full_name+'"><span>'+v.name+'</span><i class="fas fa-info-circle" title="mais informações"></i><i class="fas fa-external-link-alt" title="acessar no GitHub"></i><i class="fas fa-star"></i><i>'+v.stargazers_count+'</i></li>'); //info básica
+					$('ol').append('<li id="'+v.full_name+'" data-repo="'+v.name+'"><span>'+v.name+'</span><i class="fas fa-info-circle" title="mais informações"></i><i class="fas fa-external-link-alt" title="acessar no GitHub"></i><i class="fas fa-star"></i><i>'+v.stargazers_count+'</i></li>'); //info básica
 					if(v.language!=null)	$('ol li:last').append('<em>'+v.language+'</em>'); //info extra
 					if(v.description!=null)	$('ol li:last').append('<div>'+v.description+'</div>'); //info extra
 				})
 				$('.fa-info-circle').click(function(){ //info
 					$(this).closest('li').find('em,div').slideToggle();
 				})
+				if(infos!=null) $('li[data-repo').find('em,div').slideToggle();
 				$('.fa-external-link-alt').click(function(){
 					window.open('https://github.com/'+$(this).closest('li').attr('id'),'_blank');
 				})
@@ -75,9 +76,6 @@ $(document).ready(function(){
 			})
 		})
 	}
-	var hash = window.location.hash.replace('#','').split('/');
-	if(hash!='') { detalhar(hash[0]) };	
-
-	//paginação
-	
+	var hash = caminho(window.location.hash); //link para página do usuário
+	if(hash!='') { detalhar(hash[0],'desc',hash[1]) };	
 })
