@@ -6,7 +6,8 @@ Ferramenta de busca de usuários do GitHub e seus respectivos diretórios
 
 ### Começando o projeto
 
-Para instalar Yarn `https://yarnpkg.com/lang/pt-br/docs/install/`.
+Instalar Yarn:
+https://yarnpkg.com/pt-BR/docs/install#windows-stable
 
 Para rodar os testes:
 ```
