@@ -1,16 +1,19 @@
 # Busca Git
 
 Ferramenta de busca de usuários do GitHub e seus respectivos diretórios
+https://murilomugga.github.io/buscagit
 
 # Instalação
 
-### Começando o projeto
+Instalar Node:
+
+https://nodejs.org/en/
 
 Instalar Yarn:
 
 https://yarnpkg.com/pt-BR/docs/install
 
-Para rodar os testes:
+Rodar testes:
 ```
 yarn test
 ```
