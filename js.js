@@ -65,7 +65,7 @@ $(document).ready(function(){
 				$('.fa-info-circle').click(function(){ //info
 					$(this).closest('li').find('em,div').slideToggle();
 				})
-				if(infos!=null) $('li[data-repo').find('em,div').slideToggle();
+				if(infos!=null) $('li[data-repo='+infos+']').find('em,div').slideToggle();
 				$('.fa-external-link-alt').click(function(){
 					window.open('https://github.com/'+$(this).closest('li').attr('id'),'_blank');
 				})
