@@ -1,0 +1,28 @@
+======
+IDEIAS
+======
+	gamification
+		medalhas para responder questionários de comportamento
+		medalhas para perguntas sobre o assunto
+	match
+		para namoro, amizade, trabalho
+	conferência
+		previsões antigas se realizando? anota previsões antigas, diário
+	astros
+		céu estava quando nasceu, pediu em namoro, casamento
+		pode imprimir
+
+=======
+DESAFIO
+=======
+	A fazer
+		paginação
+		<meta name="viewport" content="width=device-width"> initial-scale=1.0 ?
+		remover aspas e caracteres na busca https://stackoverflow.com/questions/388996/regex-for-javascript-to-allow-only-alphanumeric
+		buscar email com events no detalhamento https://www.sourcecon.com/how-to-find-almost-any-github-users-email-address/	
+		highlight da query
+	Teste
+		gitter-badger
+		fabpot
+	Posteridade
+		ordena JSON a partir de valor do campo tal: json.sort((a, b) => (a.campotal > b.campotal) ? -1 : 1)
